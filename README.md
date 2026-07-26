@@ -6,5 +6,8 @@ remaining arguments.
 ```ts
 import { partial } from "@lucid-softworks/partial";
 
+const log = (level: string, message: string) =>
+  console.log(`[${level}] ${message}`);
 const logInfo = partial(log, "info");
+logInfo("Started");
 ```
